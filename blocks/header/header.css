@@ -9,8 +9,8 @@
   --cintas-nav-font: 'ProximaNova', 'Proxima Nova', 'proxima-nova', helvetica, arial, sans-serif;
   --cintas-nav-font-size: 13px;
   --cintas-nav-font-weight: 500;
-  --cintas-nav-letter-spacing: -0.01em;
-  --cintas-nav-item-padding: 20px 10px;
+  --cintas-nav-letter-spacing: -0.015em;
+  --cintas-nav-item-padding: 20px 9px;
   --cintas-brand-blue: #004990;
   --cintas-top-bar-bg: #fff;
   --cintas-top-bar-border: #e0e0e0;
@@ -383,10 +383,8 @@ header nav .nav-sections ul>li:empty {
     margin: 0;
     padding: 0;
     list-style: none;
-    max-width: 1264px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 16px;
+    width: 100%;
+    overflow: hidden;
   }
 
   /* Category link items */
@@ -395,6 +393,11 @@ header nav .nav-sections ul>li:empty {
     border-radius: 0;
     padding: 0;
     flex: 0 0 auto;
+  }
+
+  /* Push ACCOUNT and SEARCH ORDER to the right  last two items */
+  header nav .nav-sections .default-content-wrapper>ul>li:nth-last-child(2) {
+    margin-left: auto;
   }
 
   /* Category links  EDS wraps plain text in <p>, linked items in <a> */
