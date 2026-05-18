@@ -384,7 +384,7 @@ header nav .nav-sections ul>li:empty {
     padding: 0;
     list-style: none;
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
   }
 
   /* Category link items */
@@ -395,8 +395,8 @@ header nav .nav-sections ul>li:empty {
     flex: 0 0 auto;
   }
 
-  /* Push ACCOUNT and SEARCH ORDER to the right  last two items */
-  header nav .nav-sections .default-content-wrapper>ul>li:nth-last-child(2) {
+  /* Push Account item (nav-drop) and Search Order (last item) to the right */
+  header nav .nav-sections .default-content-wrapper>ul>li.nav-drop {
     margin-left: auto;
   }
 
