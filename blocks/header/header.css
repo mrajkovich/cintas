@@ -397,6 +397,8 @@ header nav .nav-sections ul>li:empty {
   /* Account (nav-drop) and Search Order: pulled out of flow, positioned right */
   header nav .nav-sections .default-content-wrapper>ul {
     position: relative;
+    /* Reserve space on the right for Account (~81px) + Search Order (~134px) = 215px */
+    padding-right: 220px;
   }
 
   header nav .nav-sections .default-content-wrapper>ul>li.nav-drop,
@@ -409,7 +411,7 @@ header nav .nav-sections ul>li:empty {
   }
 
   header nav .nav-sections .default-content-wrapper>ul>li.nav-drop {
-    right: 134px; /* width of Search Order */
+    right: 134px; /* width of Search Order item */
   }
 
   header nav .nav-sections .default-content-wrapper>ul>li:last-child:not(.nav-drop) {
