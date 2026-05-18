@@ -394,17 +394,26 @@ header nav .nav-sections ul>li:empty {
     flex: 0 0 auto;
   }
 
-  /* Push Account (nav-drop) and Search Order to the right */
-  header nav .nav-sections .default-content-wrapper>ul>li.nav-drop,
-  header nav .nav-sections .nav-drop {
-    flex: 0 0 auto !important;
-    margin-left: auto !important;
-    align-self: stretch;
+  /* Account (nav-drop) and Search Order: pulled out of flow, positioned right */
+  header nav .nav-sections .default-content-wrapper>ul {
+    position: relative;
   }
 
-  /* Search Order (last li, not nav-drop) stays flush right after Account */
+  header nav .nav-sections .default-content-wrapper>ul>li.nav-drop,
   header nav .nav-sections .default-content-wrapper>ul>li:last-child:not(.nav-drop) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
     flex: 0 0 auto;
+  }
+
+  header nav .nav-sections .default-content-wrapper>ul>li.nav-drop {
+    right: 134px; /* width of Search Order */
+  }
+
+  header nav .nav-sections .default-content-wrapper>ul>li:last-child:not(.nav-drop) {
+    right: 0;
   }
 
   /* Category links  EDS wraps plain text in <p>, linked items in <a> */
