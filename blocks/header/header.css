@@ -387,17 +387,24 @@ header nav .nav-sections ul>li:empty {
     overflow: visible;
   }
 
-  /* Category link items */
-  header nav .nav-sections .default-content-wrapper>ul>li,
-  header nav .nav-sections .nav-drop {
+  /* Category link items  no shrink, exact size */
+  header nav .nav-sections .default-content-wrapper>ul>li {
     border-radius: 0;
     padding: 0;
     flex: 0 0 auto;
   }
 
-  /* Push Account item (nav-drop) and Search Order (last item) to the right */
-  header nav .nav-sections .default-content-wrapper>ul>li.nav-drop {
-    margin-left: auto;
+  /* Push Account (nav-drop) and Search Order to the right */
+  header nav .nav-sections .default-content-wrapper>ul>li.nav-drop,
+  header nav .nav-sections .nav-drop {
+    flex: 0 0 auto !important;
+    margin-left: auto !important;
+    align-self: stretch;
+  }
+
+  /* Search Order (last li, not nav-drop) stays flush right after Account */
+  header nav .nav-sections .default-content-wrapper>ul>li:last-child:not(.nav-drop) {
+    flex: 0 0 auto;
   }
 
   /* Category links  EDS wraps plain text in <p>, linked items in <a> */
