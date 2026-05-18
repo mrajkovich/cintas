@@ -384,9 +384,11 @@ header nav .nav-sections ul>li:empty {
     flex: 0 0 auto;
   }
 
-  /* Category links */
-  header nav .nav-sections .default-content-wrapper>ul>li a,
-  header nav .nav-sections .nav-drop>a {
+  /* Category links  EDS wraps plain text in <p>, linked items in <a> */
+  header nav .nav-sections .default-content-wrapper>ul>li>a,
+  header nav .nav-sections .default-content-wrapper>ul>li>p,
+  header nav .nav-sections .nav-drop>a,
+  header nav .nav-sections .nav-drop>p {
     display: block;
     color: var(--cintas-nav-text);
     font-family: var(--cintas-nav-font);
@@ -398,6 +400,8 @@ header nav .nav-sections ul>li:empty {
     line-height: 20px;
     letter-spacing: normal;
     white-space: nowrap;
+    margin: 0;
+    cursor: pointer;
   }
 
   /* Hover state */
@@ -406,8 +410,10 @@ header nav .nav-sections ul>li:empty {
     background-color: var(--cintas-nav-hover-bg);
   }
 
-  header nav .nav-sections .default-content-wrapper>ul>li:hover a,
-  header nav .nav-sections .nav-drop[aria-expanded='true']>a {
+  header nav .nav-sections .default-content-wrapper>ul>li:hover>a,
+  header nav .nav-sections .default-content-wrapper>ul>li:hover>p,
+  header nav .nav-sections .nav-drop[aria-expanded='true']>a,
+  header nav .nav-sections .nav-drop[aria-expanded='true']>p {
     color: var(--cintas-nav-text-hover);
   }
 
