@@ -7,9 +7,10 @@
   --cintas-nav-active-bg: #0e1f2e;
   --cintas-nav-height: 61px;
   --cintas-nav-font: 'ProximaNova', 'Proxima Nova', 'proxima-nova', helvetica, arial, sans-serif;
-  --cintas-nav-font-size: 14px;
+  --cintas-nav-font-size: 13px;
   --cintas-nav-font-weight: 500;
-  --cintas-nav-item-padding: 20px 15px;
+  --cintas-nav-letter-spacing: -0.01em;
+  --cintas-nav-item-padding: 20px 10px;
   --cintas-brand-blue: #004990;
   --cintas-top-bar-bg: #fff;
   --cintas-top-bar-border: #e0e0e0;
@@ -186,6 +187,18 @@ header nav .nav-brand a {
   color: var(--cintas-brand-blue);
   letter-spacing: 0;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Logo image in brand area */
+header nav .nav-brand a img,
+header nav .nav-brand p img {
+  width: auto;
+  height: 48px;
+  max-width: 160px;
+  object-fit: contain;
+  display: block;
 }
 
 header nav .nav-brand a:hover {
@@ -398,7 +411,7 @@ header nav .nav-sections ul>li:empty {
     text-decoration: none;
     padding: var(--cintas-nav-item-padding);
     line-height: 20px;
-    letter-spacing: normal;
+    letter-spacing: var(--cintas-nav-letter-spacing);
     white-space: nowrap;
     margin: 0;
     cursor: pointer;
