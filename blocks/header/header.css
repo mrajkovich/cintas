@@ -423,13 +423,16 @@ header nav .nav-sections ul>li:empty {
     flex: 0 0 auto;
   }
 
-  /* Category links  EDS wraps plain text in <p>, linked items in <a> */
+  /* Category links  EDS wraps links as li > p > a, plain text as li > p */
+  /* Must also override the global a color rule with sufficient specificity */
   header nav .nav-sections .default-content-wrapper>ul>li>a,
   header nav .nav-sections .default-content-wrapper>ul>li>p,
+  header nav .nav-sections .default-content-wrapper>ul>li>p>a,
   header nav .nav-sections .nav-drop>a,
-  header nav .nav-sections .nav-drop>p {
+  header nav .nav-sections .nav-drop>p,
+  header nav .nav-sections .nav-drop>p>a {
     display: block;
-    color: var(--cintas-nav-text);
+    color: var(--cintas-nav-text) !important;
     font-family: var(--cintas-nav-font);
     font-size: var(--cintas-nav-font-size);
     font-weight: var(--cintas-nav-font-weight);
@@ -451,9 +454,11 @@ header nav .nav-sections ul>li:empty {
 
   header nav .nav-sections .default-content-wrapper>ul>li:hover>a,
   header nav .nav-sections .default-content-wrapper>ul>li:hover>p,
+  header nav .nav-sections .default-content-wrapper>ul>li:hover>p>a,
   header nav .nav-sections .nav-drop[aria-expanded='true']>a,
-  header nav .nav-sections .nav-drop[aria-expanded='true']>p {
-    color: var(--cintas-nav-text-hover);
+  header nav .nav-sections .nav-drop[aria-expanded='true']>p,
+  header nav .nav-sections .nav-drop[aria-expanded='true']>p>a {
+    color: var(--cintas-nav-text-hover) !important;
   }
 
   /* Dropdown submenu */
